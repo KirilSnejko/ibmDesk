@@ -49,3 +49,24 @@ let isAuthenticated = true;
 
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 console.log("Authentication Status:", authenticationStatus);
+
+
+let peopleType = "Employee";
+let accessTo;
+
+switch (peopleType) {
+    case "Employee":
+        accessTo = "You have access to Dietary Services";
+        break;
+    case "Enrolled Member":
+        accessTo = "You have access to Dietary Services and one-on-one interaction with a dietician";
+        break;
+    case "Subscriber,":
+        accessTo = "You have partial access to facilitate to Dietary Services";
+        break;
+    case "Non-Subscriber":
+        accessTo = "You need to enroll or at least subscribe first to avail this facility"
+    default:
+        accessTo = "Invalid role. Please provide a valid role.";
+}
+console.log(accessTo);
